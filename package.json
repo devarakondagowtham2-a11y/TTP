@@ -1,0 +1,35 @@
+{
+  "name": "trojan-tarpit-protocol",
+  "version": "1.0.0",
+  "description": "A defensive deception framework that inverts bot defense by trapping, tarpitting, and poisoning scrapers without 403 blocks.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "test:bot": "node test-bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devarakondagowtham2-a11y/TTP.git"
+  },
+  "keywords": [
+    "bot-defense",
+    "tarpit",
+    "data-poisoning",
+    "cybersecurity",
+    "proof-of-work",
+    "honeypot",
+    "anti-scraping"
+  ],
+  "author": "Gowtham (devarakondagowtham2-a11y)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
