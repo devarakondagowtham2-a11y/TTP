@@ -1,5 +1,7 @@
 # Trojan Tarpit Protocol (TTP)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22024054.svg)](https://doi.org/10.5281/zenodo.22024054)
+
 An offensive-defense bot mitigation framework that inverts the traditional security paradigm: instead of blocking scrapers with `403 Forbidden` or CAPTCHAs, TTP deceptively accepts bot requests, holds their connections open (tarpit), and serves schema-valid poisoned data.
 
 Read the full framework position paper in [PAPER.md](./PAPER.md).
