@@ -97,4 +97,10 @@ app.listen(PORT, () => {
   console.log('  GET  /api/products (Legitimate endpoint)');
   console.log('  POST /api/newsletter/subscribe (Contains honeypot field)');
   console.log('  GET  /admin/debug/prices (Disallowed decoy endpoint)');
+  console.log('  GET  /demo-ui (Direct link to view the PoW Challenge UI)');
+});
+
+// Demo UI endpoint
+app.get('/demo-ui', requirePow, (req, res) => {
+  res.send('<h1>Success!</h1><p>You have successfully solved the cryptographic puzzle and verified you are a real browser.</p>');
 });

@@ -376,6 +376,12 @@ Before executing Phase 1 (The Gift), the protocol must intercept the request and
 1.  **ToS Update:** The website's Terms of Service must explicitly state: *"Automated access is strictly prohibited. Unauthorised automated requests are subject to aggressive rate limiting, computational verification challenges, and intentional data alteration."*
 2.  **Reframing:** In all documentation and code comments, tarpitting should be defined as "Extreme Rate Limiting for Unverified Traffic," not "Resource Exhaustion." This ensures the defense is legally defensible as a standard security practice to protect server integrity.
 
+### 10.6 Flaw: The Arms Race (Bots Will Adapt)
+**The Vulnerability:** No security tool lasts forever. Eventually, advanced headless browsers (using AI vision) will learn to avoid `display: none` honeypots or detect repetitive decoy mazes. TTP buys 6–18 months of protection before sophisticated scraper operations adapt their codebases to evade current static traps.
+**The Engineering Solution: Polymorphic Defense and Honeytokens**
+1.  **Polymorphic Bait Rendering:** Instead of relying on static CSS rules like `display: none`, the server must dynamically randomize how honeypots are hidden on every request. Techniques include placing elements behind legitimate content using `z-index`, using JavaScript to push elements off-screen, or rendering them as 1x1 transparent pixels. This forces AI vision models to perform expensive full-page rendering evaluations, massively increasing the scraper's compute cost.
+2.  **Active Honeytokens (Canary Data):** Inject unique, traceable tracking strings (honeytokens) into the poisoned data—for example, a fake product SKU formatted as a valid UUID. If a scraper later attempts to search for that specific fake SKU or uses it in an API call, the system instantly confirms them as a bot, completely bypassing the need for form-based honeypots.
+
 ---
 
 ## 11. Conclusion
